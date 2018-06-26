@@ -16,8 +16,8 @@ RUN wget -O conductor.tar.gz https://github.com/Netflix/conductor/archive/v${CON
 # COPY . /conductor
 WORKDIR /conductor
 
-# Build the server on run
-ENTRYPOINT ./gradlew build -x test
+# Build the server
+RUN ./gradlew build -x test
 
 
 
